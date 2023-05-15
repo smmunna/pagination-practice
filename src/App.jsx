@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import MyProducts from './MyProducts'
-import { useLoaderData } from 'react-router-dom'
+import { ScrollRestoration, useLoaderData } from 'react-router-dom'
 
 function App() {
 
@@ -68,6 +68,7 @@ function App() {
         </select>
 
       </div>
+      <ScrollRestoration/>
     </div>
   )
 }
