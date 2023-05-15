@@ -1,15 +1,16 @@
 import React from 'react';
 import './MyProduct.css'
-import Car from './6.png'
 
-const MyProducts = () => {
+const MyProducts = ({ product }) => {
+    const { name, price, img } = product;
+
     return (
         <div className='card'>
-        <div style={{textAlign:'center'}}>
-            <img src={Car} width={150} alt="" />
-        </div>
-            <h3>My Products</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, sequi.</p>
+            <div style={{ textAlign: 'center' }}>
+                <img src={img} width={150} alt="" />
+            </div>
+            <h3>{name}</h3>
+            <p>Price: ${price}</p>
         </div>
     );
 }
